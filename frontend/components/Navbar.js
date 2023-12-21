@@ -1,5 +1,6 @@
 import Link from "next/link";
 import logo from "../public/fixit_logo.png";
+import Login from "../components/Login"
 
 const Navbar = () => {
   return (
@@ -16,9 +17,9 @@ const Navbar = () => {
       </div>
 
       {/* Navbar Links */}
-      <div className=" flex gap-5">
+      <div className=" flex gap-5 items-center">
         <Link href={"/about"}>About Us</Link>
-        <Link href={"/login"}>Login / SignUp</Link>
+        <Login/>
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+
 export default function Home() {
   const title1 = "Fix your Sales";
   const title2 = "Enabling Human Intelligence with Artificial Intelligence";
