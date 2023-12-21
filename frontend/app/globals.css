@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.landing_title_gradient{
+    background: -webkit-linear-gradient(#93c5fd, #fff);
+    background-clip: text;
+    color: #374151;
+    animation: ease-in forwards running reveal;
+    animation-duration: 0.1s;
+}
+
+
+@keyframes reveal {
+  from{
+    color:#374151;
+    opacity: 0;
+  }
+  to {
+    color: transparent;
+    opacity: 1;
+  } 
+}
