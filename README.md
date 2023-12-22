@@ -10,10 +10,10 @@
 
 Dummy quesions for the chatbox:
 
-[{"question": "How can a salesperson effectively prepare for a phone call to maximize their chances of success?",
+     [{"question": "How can a salesperson effectively prepare for a phone call to maximize their chances of success?",
      "answer": "Effective preparation involves researching the prospect, understanding their needs, and scripting key talking points to guide the conversation."},
     
-    {"question": "What role does active listening play in improving phone call efficiency?",
+     {"question": "What role does active listening play in improving phone call efficiency?",
      "answer": "Active listening helps salespeople better understand customer needs, allowing them to tailor their pitch and address concerns, ultimately leading to more successful calls."},
     
     {"question": "How can technology be leveraged to streamline the sales call process?",
@@ -38,5 +38,4 @@ Dummy quesions for the chatbox:
      "answer": "Crafting a concise and personalized opening statement that highlights the value proposition and addresses the prospect's specific challenges can grab their attention and set a positive tone for the call."},
     
     {"question": "How can ongoing training and feedback contribute to continuous improvement in phone call efficiency?",
-     "answer": "Regular training sessions, feedback from experienced mentors, and analyzing call recordings help salespeople identify areas for improvement, refine their skills, and stay updated on industry best practices."}
-]
+     "answer": "Regular training sessions, feedback from experienced mentors, and analyzing call recordings help salespeople identify areas for improvement, refine their skills, and stay updated on industry best practices."}]
