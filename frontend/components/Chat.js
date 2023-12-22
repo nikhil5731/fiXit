@@ -159,7 +159,7 @@ const Chat = () => {
           </div>
 
           {/* ChatBox */}
-          <div className="flex text-[#212520] flex-col gap-8 w-full lg:w-4/5 items-center mt-8 px-8 bg-[#FBFAF9]">
+          <div className="flex text-[#212520] flex-col gap-8 w-full lg:w-4/5 items-center mt-8 px-8 lg:px-32 bg-[#FBFAF9]">
             {/* Logo */}
             <div className="hidden lg:flex gap-3 items-center">
               <img
@@ -204,12 +204,11 @@ const Chat = () => {
 
             {/* Response Box */}
             {loading ? (
-              <div className="loader">
-
-              </div>
-          
+              <div className="loader"></div>
             ) : (
-              <div className="bg-white border-2 w-full p-5">{response}</div>
+              response.length > 0 && (
+                <div className="bg-white border-2 w-full p-5">{response}</div>
+              )
             )}
 
             {/* Training Nudges */}
