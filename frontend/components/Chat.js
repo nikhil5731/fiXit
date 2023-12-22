@@ -6,7 +6,7 @@ const Chat = () => {
   return (
     <>
       {session.status === "authenticated" && (
-        <div className=" h-[90vh] flex text-white">
+        <div className=" h-[91vh] flex text-white">
           {/* Side Navbar */}
           <div className="hidden lg:block w-1/5 text-sm bg-[#212520] px-12 h-full">
             {/* Back Button */}
@@ -155,7 +155,7 @@ const Chat = () => {
             </div>
 
             {/* ChatInput */}
-            <div className="bg-white flex items-center justify-between w-full border-[1px] border-[#404550] rounded-lg px-4 py-5">
+            <div className="bg-white flex items-center justify-between w-full border-[1px] border-[#404550] rounded-lg p-4">
               <input
                 type="text"
                 className="text-black w-full outline-none"

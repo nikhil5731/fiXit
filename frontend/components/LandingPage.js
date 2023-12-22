@@ -3,7 +3,7 @@ export default function LandingPage() {
   const title2 = "Enabling Human Intelligence with Artificial Intelligence";
 
   return (
-    <div className="w-full h-[90vh] bg-[#212520] flex justify-center overflow-hidden">
+    <div className="w-full h-screen bg-[#212520] flex justify-center overflow-hidden">
       <div className="w-[83%] h-screen flex flex-col gap-8 justify-center items-center">
         <h1 className="text-2xl md:text-5xl md:leading-[4rem] lg:text-6xl font-bold text-center">
           {/* Fix your Sales */}
