@@ -1,8 +1,20 @@
 "use client";
 import { useSession } from "next-auth/react";
+import { useState } from "react";
+import axios from "axios";
 
 const Chat = () => {
   const session = useSession();
+  const [query, setQuery] = useState("");
+  const [response,setResponse] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const res = (await axios.get(`http://127.0.0.1:8000/items/${query}`)).data;
+    console.log(res);
+    setResponse(res.response);
+  };
+
   return (
     <>
       {session.status === "authenticated" && (
@@ -157,11 +169,18 @@ const Chat = () => {
             {/* ChatInput */}
             <div className="bg-white flex items-center justify-between w-full border-[1px] border-[#404550] rounded-lg p-4">
               <input
+                onChange={(e) => {
+                  setQuery(e.target.value);
+                }}
+                name="query"
                 type="text"
                 className="text-black w-full outline-none"
                 placeholder="SalesGPT can help you to browse uncovered topics"
               />
-              <button className="bg-gray-100 p-2 rounded-full">
+              <button
+                className="bg-gray-100 p-2 rounded-full"
+                onClick={handleSubmit}
+              >
                 <svg
                   stroke="#404550"
                   fill="#404550"
@@ -178,6 +197,11 @@ const Chat = () => {
                 </svg>
               </button>
             </div>
+
+            {/* Response Box */}
+            {(response.length > 0) && <div className="bg-white border-2 w-full p-5">
+                  {response}
+            </div>}
 
             {/* Training Nudges */}
             <div className="w-full">
