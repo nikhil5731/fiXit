@@ -6,13 +6,17 @@ import axios from "axios";
 const Chat = () => {
   const session = useSession();
   const [query, setQuery] = useState("");
-  const [response,setResponse] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [response, setResponse] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = (await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/${query}`)).data;
-    // console.log(res);
+    setLoading(true);
+    const res = (
+      await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/${query}`)
+    ).data;
     setResponse(res.response);
+    setLoading(false);
   };
 
   return (
@@ -199,9 +203,14 @@ const Chat = () => {
             </div>
 
             {/* Response Box */}
-            {(response.length > 0) && <div className="bg-white border-2 w-full p-5">
-                  {response}
-            </div>}
+            {loading ? (
+              <div className="loader">
+
+              </div>
+          
+            ) : (
+              <div className="bg-white border-2 w-full p-5">{response}</div>
+            )}
 
             {/* Training Nudges */}
             <div className="w-full">

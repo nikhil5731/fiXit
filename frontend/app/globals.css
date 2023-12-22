@@ -2,29 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.landing_title_gradient{
-    background: -webkit-linear-gradient(#93c5fd, #fff);
-    background-clip: text;
-    color: #374151;
-    animation: ease-in forwards running reveal;
-    animation-duration: 0.1s;
+.landing_title_gradient {
+  background: -webkit-linear-gradient(#93c5fd, #fff);
+  background-clip: text;
+  color: #374151;
+  animation: ease-in forwards running reveal;
+  animation-duration: 0.1s;
 }
-
 
 @keyframes reveal {
-  from{
-    color:#374151;
+  from {
+    color: #374151;
     opacity: 0;
   }
   to {
     color: transparent;
     opacity: 1;
-  } 
+  }
+}
+
+.loader {
+  border: 5px solid rgb(231, 231, 231); /* Light grey */
+  border-top: 5px solid black; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
