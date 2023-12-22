@@ -46,7 +46,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/items/{query}")
+@app.get("/{query}")
 def read_item(query: str):
     for qa_pair in qa_array:
         if query.lower() in qa_pair["question"].lower():

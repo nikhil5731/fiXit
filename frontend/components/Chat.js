@@ -10,8 +10,8 @@ const Chat = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = (await axios.get(`http://127.0.0.1:8000/items/${query}`)).data;
-    console.log(res);
+    const res = (await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/${query}`)).data;
+    // console.log(res);
     setResponse(res.response);
   };
 
